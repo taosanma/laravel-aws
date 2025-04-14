@@ -1,0 +1,75 @@
+/* ボタンのベースデザイン */
+button, .btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px; /* 角丸 */
+    border: none; /* 枠線なし */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* すべてのスタイル変更にアニメーションを追加 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase; /* テキストを大文字に変換 */
+    letter-spacing: 1px; /* 文字間隔を広く */
+}
+
+/* 戻るボタンのデザイン */
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* シャドウ効果 */
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px); /* 少し上に浮かせる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ホバー時にシャドウ強調 */
+}
+
+/* イベント作成ボタン */
+.btn-create-event {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none; /* リンクの下線を削除 */
+    cursor: pointer;
+    background-color: #4CAF50; /* ボタンの背景色 */
+    color: white; /* ボタンのテキスト色 */
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase; /* テキストを大文字にする */
+    letter-spacing: 1px; /* 文字間隔 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* シャドウ効果 */
+}
+
+.btn-create-event:hover {
+    background-color: #45a049;
+    transform: translateY(-2px); /* 少し上に浮かせる */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* ホバー時にシャドウ強調 */
+}
+
+/* ボタンがフォーカスされているときのスタイル */
+button:focus, .btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.8); /* フォーカス時に緑のシャドウ */
+}
+
+/* レスポンシブデザインでボタンのサイズ調整 */
+@media (max-width: 768px) {
+    button, .btn {
+        width: 100%; /* 小さな画面ではボタンが全幅を占める */
+        padding: 14px; /* パディングを少し大きく */
+    }
+}
+
+/* レスポンシブ対応（画面が小さくなった時） */
+@media (max-width: 768px) {
+    a.btn-create-event {
+        width: 100%; /* 小さい画面ではボタンを横幅いっぱいに */
+        padding: 14px;
+    }
+}
+
